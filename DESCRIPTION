@@ -1,0 +1,11 @@
+Package: corguesser
+Title: Correlation Guesser From Scatterplots Using CNN
+Version: 0.0.0.9000
+Authors@R: person("Datathon", "BR", email = "athos.damiani@curso-r.com", role = c("aut", "cre"))
+Description: Convolutional neural networks (CNN) that guesses correlation from scatterplots plots
+Depends: R (>= 3.4.3)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: tidyverse,
+    hashids
