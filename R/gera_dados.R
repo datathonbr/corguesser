@@ -37,7 +37,7 @@ generate_one_set <- function(corr, n = 30, n_outliers = rpois(1, 6)){
 #'
 #' @examples
 generate_n_sets <- function(n_sets, f = generate_one_set) {
-  hashid_setting <- hashids::hashid_settings(as.character(runif(1)), min_length = 5 + sample(5, 1))
+  hashid_setting <- hashids::hashid_settings(as.character(runif(1)), min_length = 5 + sample(5, 1), alphabet = paste0(c(letters, 0:9), collapse = ""))
   db <- tibble(id = map_chr(1:n_sets, hashids::encode, settings = hashid_setting)) %>%
     mutate(corr_teorica = 2*runif(n()) - 1,
            data = map(corr_teorica, f),
